@@ -1,0 +1,34 @@
+<view>
+	<view>
+		<input
+			placeholder="请选择城市"
+			focus="{{true}}"
+			bindconfirm="getSuggestion">
+			<navigator open-type="navigateBack"></navigator>
+		</input>
+	</view>
+
+	<!-- 热门城市 -->
+	<view class="city" wx:if="{{showCity}}">
+		<view class="title">热门城市</view>
+		<view>
+			<button size="mini" bindtap="goWeather">定位
+				<image src="../images/map1.png" />
+			</button>
+			<block wx:for="{{cityList}}" wx:key="{{item.id}}">
+				<button size="mini" data-loc="{{item}}" bindtap="chooseCity">{{item.name}}</button>
+			</block>
+		</view>
+	</view>
+
+	<view class="suggest" wx:else>
+    <!--绑定回填事件-->
+    <view class="suggest-city" bindtap="getcity">{{city}}</view>
+    <view class="suggest-detail" wx:for="{{suggestion}}" wx:key="index">
+    	<!--根据需求渲染相应数据-->
+    	<view bindtap="chooseCity" data-loc="{{item}}">{{item.title}}</view>
+    	<view class="suggest-address" bindtap="chooseCity" data-loc="{{item}}">{{item.address}}</view>
+    </view>
+	</view>
+
+</view>

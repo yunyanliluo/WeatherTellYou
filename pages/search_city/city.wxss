@@ -1,0 +1,70 @@
+input {
+	border: 1px solid rgba(0, 0, 0, 0.17);
+	position: relative;
+	margin: 10rpx 20rpx 20rpx 20rpx;
+	padding: 20rpx 20rpx 20rpx 80rpx;
+	font-size: 30rpx;
+}
+
+.input-placeholder {
+	font-size: 25rpx;
+}
+
+input navigator {
+	content: " ";
+  display: inline-block;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 2rpx 2rpx 0 0;
+  border-color: #888888;
+  border-style: solid;
+  transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
+  position: absolute;
+  top: 50%;
+  margin-top: -8rpx;
+  left: 28rpx;
+}
+
+.city {
+  margin: 0 40rpx;
+}
+
+image {
+  height: 30rpx;
+  width: 30rpx;
+  vertical-align: text-bottom;
+}
+
+.city .title {
+  margin: 10rpx;
+  font-size: 30rpx;
+}
+
+button {
+  overflow: visible;
+  margin: 10rpx;
+  background-color: #fff;
+  border: 1px solid #f7f7f7;
+}
+
+.suggest {
+  font-size: 28rpx;
+}
+
+.suggest-city,.suggest-detail {
+  padding-left: 30rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.suggest-city {
+  padding-bottom: 20rpx;
+}
+
+.suggest-detail view {
+  margin: 15rpx 0;
+}
+
+.suggest-address {
+  font-size: 24rpx;
+  color: #ccc;
+}

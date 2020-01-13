@@ -1,0 +1,167 @@
+.backgroud-img {
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	z-index: -2;
+}
+
+.weather {
+	color: white;
+}
+
+.userinfo,.user-address,.weather-now {
+	display: flex;
+	align-items: center;
+	padding: 0 20rpx;
+}
+
+.userinfo {
+	padding-top: 20rpx;
+}
+
+.userinfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+	font-size: 32rpx;
+}
+
+.user-address {
+	font-size: 35rpx;
+	margin-top: 20rpx;
+	justify-content: center;
+}
+
+.address-img {
+	width: 30rpx;
+  height: 30rpx;
+}
+
+.weather-now {
+	flex-direction: column;
+}
+
+.now-tmp {
+	display: flex;
+	font-size: 130rpx;
+	font-weight: 200;
+	margin: 20rpx;
+}
+
+.now-tmp sup {
+	font-size: 30rpx;
+	padding-top: 15rpx;
+}
+
+.now-cond {
+	display: flex;
+	align-items: center;
+	font-size: 35rpx;
+	margin-bottom: 20rpx;
+}
+
+.now-cond image {
+	margin-right: 15rpx;
+}
+
+.weather-now .item-update {
+	align-self: flex-end;
+	margin-bottom: 15rpx;
+	font-size: 28rpx;
+}
+
+.weather-now .item-wind {
+	display: flex;
+	font-size: 30rpx;
+}
+
+.column-wind {
+	margin-right: 30rpx;
+	padding-right: 30rpx;
+	text-align: right;
+	border-right: 1px solid #FFF;
+}
+
+.weather-now image {
+	width: 50rpx;
+  height: 50rpx;
+}
+
+swiper {
+	height: 400rpx;
+}
+.weather-hourly,
+.weather-daily,
+.weather-lifestyle {
+	background-color: rgba(0, 0, 0, .3);
+	padding: 20rpx 0;
+	font-size: 30rpx;
+}
+
+.title {
+	font-size: 35rpx;
+	text-align: center;
+}
+
+.hourly-item,
+.hourly,
+.daily-item,
+.daily {
+	display: flex;
+}
+
+.hourly-item,
+.daily-item {
+	justify-content: space-around;
+	margin-top: 20rpx;
+	padding-top: 20rpx;
+	border-top: 1px solid #FFF;
+}
+
+.hourly-item .hourly,
+.daily-item .daily {
+	flex-direction: column;
+	align-items: center;
+}
+
+.hourly text,
+.daily text {
+	margin-top: 10rpx;
+}
+
+.slide-image {
+	width: 50rpx;
+  height: 50rpx;
+}
+
+.lifestyle-item {
+	margin-top: 20rpx;
+	padding: 0 20rpx;
+	border-top: 1px solid #FFF;
+}
+
+.lifestyle {
+	margin-top: 30rpx;
+	clear: both;
+}
+
+.lifestyle-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.lifestyle-text .detail {
+	margin-top: 15rpx;
+	font-size: 26rpx;
+	line-height: 1.3;
+}
+.lifestyle-item .slide-image {
+	float: left;
+	width: 90rpx;
+  height: 90rpx;
+  margin: 20rpx 20rpx 20rpx 0;
+}

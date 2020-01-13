@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/weather/weather",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/search_city/city"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeatherTellYou",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 3000
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,92 @@
+<view class="weather">
+	<image class="backgroud-img" src="../images/background/{{backgroundImg}}.jpg"></image>
+	<!-- 用户信息 -->
+	<view class="userinfo">
+		<image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+		<text class="userinfo-nickname">{{time}}，{{userInfo.nickName}}</text>
+	</view>
+
+	<!-- 地址 -->
+	<view class="user-address">
+		<navigator url="../search_city/city">
+			<text>{{address}}</text>
+			<image class="address-img" src="../images/map.png"></image>
+		</navigator>
+	</view>
+
+	<!-- 天气情况 -->
+	<view class="weather-now">
+		<view class="now-tmp">{{weatherNow.tmp}}<sup>℃</sup></view>
+		<view class="now-cond">
+			<image src="../images/cond-icon-heweather/{{weatherNow.cond_code}}.png"></image>
+			<text>{{weatherNow.cond_txt}}</text>
+		</view>
+		<view class="item-wind">
+			<view class="column-wind">
+				<view>{{weatherNow.wind_dir}} {{weatherNow.wind_sc}}级</view>
+				<view>湿度 {{weatherNow.hum}}</view>
+			</view>
+			<view>
+				<view>大气压 {{weatherNow.pres}}</view>
+				<view>降水量 {{weatherNow.pcpn}}</view>
+			</view>
+		</view>
+		<view class="item-update">
+			<text>更新于：{{weatherNow.loc}}</text>
+		</view>
+	</view>
+
+	<!-- 24小时内逐3小时天气 -->
+	<view class="weather-hourly">
+		<view class="title">未来24小时</view>
+		<swiper indicator-dots="{{true}}">
+		  <block wx:for="{{hourlyWeather}}" wx:for-index="hourlyIndex" wx:for-item="hourly" wx:key="{{hourlyIndex}}">
+		    <swiper-item class="hourly-item">
+		    	<view class="hourly" wx:for="{{hourly}}" wx:key="{{item.time}}">
+		    		<text>{{item.time}}</text>
+		    		<text>{{item.cond_txt}}</text>
+		    		<image src="../images/cond-icon-heweather/{{item.cond_code}}.png" class="slide-image"/>
+		    		<text>{{item.tmp}}℃</text>
+		    		<text>{{item.wind_dir}}</text>
+		    		<text>风力{{item.wind_sc}}级</text>
+		    	</view>
+		    </swiper-item>
+		  </block>
+		</swiper>
+	</view>
+
+	<!-- 近3天预报 -->
+	<view  class="weather-daily">
+		<view class="title">未来3天</view>
+		<view class="daily-item">
+			<block wx:for="{{dailyWeather}}" wx:key="{{item.date}}">
+				<view class="daily">
+					<text>{{item.date}}</text>
+	    		<text>{{item.cond_txt_d}}</text>
+	    		<image src="../images/cond-icon-heweather/{{item.cond_code_d}}.png" class="slide-image"/>
+	    		<text>{{item.tmp_min}}℃~{{item.tmp_max}}℃</text>
+	    		<image src="../images/cond-icon-heweather/{{item.cond_code_n}}.png" class="slide-image"/>
+	    		<text>{{item.cond_txt_n}}</text>
+	    		<text>{{item.wind_dir}}</text>
+	    		<text>风力{{item.wind_sc}}级</text>
+				</view>
+			</block>
+		</view>
+	</view>
+
+	<!-- 生活指数 -->
+	<view class="weather-lifestyle">
+		<view class="title">生活指数</view>
+		<view class="lifestyle-item">
+			<block wx:for="{{lifestyle}}" wx:key="{{item.type}}">
+				<view class="lifestyle">
+					<image src="../images/lifestyle/lifestyle_{{item.type}}.png" class="slide-image"/>
+					<view class="lifestyle-text">
+						<text>{{item.typeTxt}}：{{item.brf}}</text>
+						<text class="detail">{{item.txt}}</text>
+					</view>
+				</view>
+			</block>
+		</view>
+	</view>
+</view>
